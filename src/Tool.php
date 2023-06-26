@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanChandler\FilamentTools;
+namespace z00f\FilamentTools;
 
 use Closure;
 use Error;
@@ -8,7 +8,7 @@ use Filament\Forms\ComponentContainer;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\View\View;
-use RyanChandler\FilamentTools\Exceptions\ToolsException;
+use z00f\FilamentTools\Exceptions\ToolsException;
 
 final class Tool
 {
