@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanChandler\FilamentTools\Tests;
+namespace z00f\FilamentTools\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -9,7 +9,7 @@ use Filament\Forms\FormsServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use RyanChandler\FilamentTools\FilamentToolsServiceProvider;
+use z00f\FilamentTools\FilamentToolsServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -18,7 +18,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'RyanChandler\\FilamentTools\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'z00f\\FilamentTools\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
