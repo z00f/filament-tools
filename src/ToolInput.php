@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanChandler\FilamentTools;
+namespace z00f\FilamentTools;
 
 use Illuminate\Support\Collection;
 
