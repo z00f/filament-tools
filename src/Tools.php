@@ -20,7 +20,7 @@ class Tools extends Page
 
     protected static ?Closure $canCallback = null;
 
-    /** @var array<\RyanChandler\FilamentTools\Tool> */
+    /** @var array<\z00f\FilamentTools\Tool> */
     protected static array $tools = [];
 
     public $data = [];
@@ -59,7 +59,7 @@ class Tools extends Page
     /** @param \Closure(\Filament\Pages\Page): \Filament\Pages\Page $configure */
     public static function register(Closure $configure): void
     {
-        /** @var \RyanChandler\FilamentTools\Tool $tool */
+        /** @var \z00f\FilamentTools\Tool $tool */
         $tool = app()->call($configure, [
             'tool' => new Tool(),
         ]);
