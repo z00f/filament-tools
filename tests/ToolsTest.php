@@ -2,10 +2,10 @@
 
 use Filament\Forms\Components\TextInput;
 use Livewire\Livewire;
-use RyanChandler\FilamentTools\Exceptions\ToolsException;
-use RyanChandler\FilamentTools\Tool;
-use RyanChandler\FilamentTools\ToolInput;
-use RyanChandler\FilamentTools\Tools;
+use z00f\FilamentTools\Exceptions\ToolsException;
+use z00f\FilamentTools\Tool;
+use z00f\FilamentTools\ToolInput;
+use z00f\FilamentTools\Tools;
 
 beforeEach(fn () => Tools::can(function () {
     return true;
