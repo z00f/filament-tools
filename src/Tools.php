@@ -1,12 +1,12 @@
 <?php
 
-namespace RyanChandler\FilamentTools;
+namespace z00f\FilamentTools;
 
 use Closure;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Pages\Page;
 use Illuminate\Support\Facades\Auth;
-use RyanChandler\FilamentTools\Exceptions\ToolsException;
+use z00f\FilamentTools\Exceptions\ToolsException;
 
 class Tools extends Page
 {
@@ -30,7 +30,7 @@ class Tools extends Page
         abort_if(static::$canCallback !== null && ! app()->call(static::$canCallback, ['user' => Auth::user()]), 403);
     }
 
-    /** @return array<\RyanChandler\FilamentTools\Tool> */
+    /** @return array<\z00f\FilamentTools\Tool> */
     public function getToolsProperty(): array
     {
         return static::$tools;
@@ -46,7 +46,7 @@ class Tools extends Page
 
     public function callToolSubmitAction(string $id): void
     {
-        /** @var \RyanChandler\FilamentTools\Tool $tool */
+        /** @var \z00f\FilamentTools\Tool $tool */
         $tool = $this->tools[$id];
 
         if ($action = $tool->getSubmitAction()) {
