@@ -1,9 +1,9 @@
 <?php
 
-namespace RyanChandler\FilamentTools\Exceptions;
+namespace z00f\FilamentTools\Exceptions;
 
 use Exception;
-use RyanChandler\FilamentTools\Tool;
+use z00f\FilamentTools\Tool;
 
 /** @internal */
 class ToolsException extends Exception
