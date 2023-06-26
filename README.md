@@ -1,18 +1,9 @@
-# Add a general-purpose tools page to your Filament project.
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/ryangjchandler/filament-tools.svg?style=flat-square)](https://packagist.org/packages/ryangjchandler/filament-tools)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/ryangjchandler/filament-tools/run-tests?label=tests)](https://github.com/ryangjchandler/filament-tools/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/ryangjchandler/filament-tools/Check%20&%20fix%20styling?label=code%20style)](https://github.com/ryangjchandler/filament-tools/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/ryangjchandler/filament-tools.svg?style=flat-square)](https://packagist.org/packages/ryangjchandler/filament-tools)
-
-![Screenshot of Page](./art/screenshot.png)
-
 ## Installation
 
 You can install the package via Composer:
 
 ```bash
-composer require ryangjchandler/filament-tools
+composer require z00f/filament-tools
 ```
 
 Optionally, you can publish the views using
@@ -23,15 +14,15 @@ php artisan vendor:publish --tag="filament-tools-views"
 
 ## Usage
 
-This package will automatically register a new `RyanChandler\FilamentTools\Tools` page in your Filament panel.
+This package will automatically register a new `z00f\FilamentTools\Tools` page in your Filament panel.
 
 ### Registering a new tool
 
 You can register a new tool by calling the `Tools::register()` function, providing a `Closure` as the only argument.
 
 ```php
-use RyanChandler\FilamentTools\Tools;
-use RyanChandler\FilamentTools\Tool;
+use z00f\FilamentTools\Tools;
+use z00f\FilamentTools\Tool;
 
 public function boot()
 {
@@ -41,7 +32,7 @@ public function boot()
 }
 ```
 
-All tools **require** a label. If a label isn't provided, an instance of `RyanChandler\FilamentTools\Exception\ToolsException` will be thrown.
+All tools **require** a label. If a label isn't provided, an instance of `z00f\FilamentTools\Exception\ToolsException` will be thrown.
 
 > The provided `Closure` will be executed via the container so you can type-hint any dependencies you need.
 
@@ -60,7 +51,7 @@ Tools::register(function (Tool $tool): Tool {
 });
 ```
 
-To run some logic when the form is submitted you can use the `Tool::onSubmit()` method, providing a `Closure` as the only argument. This `Closure` will receive an instance of `RyanChandler\FilamentTools\ToolInput`. This class extends `Illuminate\Support\Collection` so you are free to call any existing Collection methods.
+To run some logic when the form is submitted you can use the `Tool::onSubmit()` method, providing a `Closure` as the only argument. This `Closure` will receive an instance of `z00f\FilamentTools\ToolInput`. This class extends `Illuminate\Support\Collection` so you are free to call any existing Collection methods.
 
 ```php
 Tools::register(function (Tool $tool): Tool {
