@@ -1,18 +1,17 @@
 {
-    "name": "ryangjchandler/filament-tools",
+    "name": "z00f/filament-tools",
     "description": "Add a general-purpose tools page to your Filament project.",
     "keywords": [
-        "ryangjchandler",
+        "z00f",
         "laravel",
         "filament-tools"
     ],
-    "homepage": "https://github.com/ryangjchandler/filament-tools",
+    "homepage": "https://github.com/z00f/filament-tools",
     "license": "MIT",
     "authors": [
         {
-            "name": "Ryan Chandler",
-            "email": "support@ryangjchandler.co.uk",
-            "role": "Developer"
+        "name": "z00f",
+        "email": "z00f@gmail.com"
         }
     ],
     "require": {
@@ -35,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "RyanChandler\\FilamentTools\\": "src",
-            "RyanChandler\\FilamentTools\\Database\\Factories\\": "database/factories"
+            "z00f\\FilamentTools\\": "src",
+            "z00f\\FilamentTools\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "RyanChandler\\FilamentTools\\Tests\\": "tests"
+            "z00f\\FilamentTools\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -55,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "RyanChandler\\FilamentTools\\FilamentToolsServiceProvider"
+                "z00f\\FilamentTools\\FilamentToolsServiceProvider"
             ],
             "aliases": {
-                "FilamentTools": "RyanChandler\\FilamentTools\\Facades\\FilamentTools"
+                "FilamentTools": "z00f\\FilamentTools\\Facades\\FilamentTools"
             }
         }
     },
